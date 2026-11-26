@@ -1,3 +1,23 @@
+# Toolshop test suite
+
+Playwright UI and API tests for practicesoftwaretesting.com.
+
+## Run it in three steps
+
+1. Install: `npm install`, then `npx playwright install chromium`
+2. Copy the env file: `cp .env.example .env`
+3. Run the tests: `npm test`
+
+## What's in the suite
+
+- `tests/toolshop.spec.ts`: UI tests for the page title, the pliers search and an invalid login
+- `tests/search-hammer.spec.ts`: the hammer search (CO-12), written with a page object
+- `pages/home-page.ts`: the page object for the Toolshop home page
+- `tests/api-products.spec.ts`: API test for GET /products
+- `tests/api-cart.spec.ts`: API tests to create a cart and add a product, and to check an unknown cart gives a 404. Any cart a test creates is deleted afterwards, even if the test fails.
+
+The tests use the live Toolshop site, so they need an internet connection. If the API is down, the API tests will fail with a 404 on every path.
+
 # QA Bootcamp – Week 2
 
 Playwright and TypeScript practice for the Toolshop test suite.
