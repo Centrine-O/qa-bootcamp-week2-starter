@@ -4,7 +4,7 @@ const BASE_URL = 'https://practicesoftwaretesting.com';
 
 test('home page has the expected title', async ({ page }) => {
   await page.goto(BASE_URL);
-  await expect(page).toHaveTitle('Practice Software Testing - Toolshop - v9.9');
+  await expect(page).toHaveTitle('Practice Software Testing - Toolshop - v5.0');
 });
 
 test('searching for pliers only returns pliers', async ({ page }) => {
